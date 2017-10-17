@@ -1,0 +1,13 @@
+<p data-bind="visible: !isRpi()">{{ _('This plugin cannot run on your system.') }}</p>
+<form class="form-horizontal" data-bind="visible: isRpi">
+  <h3>{{ _('Navbar') }}</h3>
+  <div class="control-group">
+    <label class="control-label" for="settings_plugin_pigpio_navbar_widget">{{ _('Widget') }}</label>
+    <div class="controls">
+      <select id="settings_plugin_pigpio_navbar_widget" data-bind="value: settings.navbar_widget">
+        <option value="">{{ _('None') }}</option>
+        <option value="htu21d">HTU21D</option>
+      </select>
+    </div>
+  </div>
+</form>
